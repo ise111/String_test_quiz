@@ -68,6 +68,7 @@ const setupQuiz = () => {
   for(let i = 0; i <= quizIndex; i++){
     acc_answers.push(quiz[i].correct);
   }
+  console.log(quiz[quizIndex].correct);
   let filter_answers = acc_answers.concat(dammyAnswers);
   let incorrectAnswers = filter_answers.filter((answer, index, self) => {
      return self.indexOf(answer) == self.lastIndexOf(answer);
