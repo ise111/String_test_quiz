@@ -13,6 +13,7 @@ const result = document.querySelector('.result');
 const report = document.querySelector('.report');
 const btn_inv = document.querySelector('.btn-inv');
 const man = document.querySelector('.man');
+const true_answer = document.querySelector('.true-answer');
 const quiz = string_quiz;
 const quizLength = quiz.length;
 let dammyAnswers = [];
@@ -99,6 +100,7 @@ const clickHandler = (e) => {
     h2.classList.add("judgment");
     h2.classList.add("ng");
     h2.textContent = "残念";
+    true_answer.textContent = '答えは' + quiz[quizIndex].correct + 'です';
     dammy.classList.add("front");
     damage++
   }
@@ -159,6 +161,7 @@ function next() {
   h2.classList.remove("ok");
   h2.classList.remove("ng");
   h2.textContent = "";
+  true_answer.textContent = "";
   dammy.classList.remove("front");
   
   if(score < 10){
